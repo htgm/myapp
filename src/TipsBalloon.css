@@ -1,6 +1,7 @@
 
 .TipsBalloon {
   width: auto;
+  min-width: 100px;
   float: right;
   position:relative;
   display: block;                  /* ボックス要素にする */
