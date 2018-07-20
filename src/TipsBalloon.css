@@ -1,5 +1,8 @@
 
 .TipsBalloon {
+  width: auto;
+  float: right;
+  position:relative;
   display: block;                  /* ボックス要素にする */
   font-size: 90%;
   color: #fff;
@@ -10,7 +13,7 @@
   box-shadow: 4px 4px 4px 0px #E2D9DB;
 }
 /* フキダシ部分を作成 */
-.TipsBalloon:before{
+.TipsBalloon:before {
   content:''; 
   display:block; 
   position:absolute;                         /* relativeからの絶対位置 */
