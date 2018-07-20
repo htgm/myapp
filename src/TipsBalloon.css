@@ -1,0 +1,25 @@
+
+.TipsBalloon {
+  display: block;                  /* ボックス要素にする */
+  font-size: 90%;
+  color: #fff;
+  background-color: #51A2C1;
+  padding: 4px;
+  border-radius:8px;
+  z-index:100;
+  box-shadow: 4px 4px 4px 0px #E2D9DB;
+}
+/* フキダシ部分を作成 */
+.TipsBalloon:before{
+  content:''; 
+  display:block; 
+  position:absolute;                         /* relativeからの絶対位置 */
+  height:0; 
+  width:0; 
+  top:-10px; 
+  right:10px;
+  border:10px transparent solid; 
+  border-top-width:0; 
+  border-bottom-color:#51A2C1; 
+  z-index:100;
+}
