@@ -12,6 +12,13 @@
   border-radius:8px;
   z-index:100;
   box-shadow: 4px 4px 4px 0px #E2D9DB;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden; 
+}
+.TipsBalloon.show {
+  opacity: 1;
+  visibility: visible;
 }
 /* フキダシ部分を作成 */
 .TipsBalloon:before {
