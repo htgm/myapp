@@ -1,5 +1,6 @@
 
 .TipsBalloon {
+  user-select: none;
   position: relative;
   display: block;                  /* ボックス要素にする */
   font-size: 90%;
