@@ -8,8 +8,6 @@
   border-radius:8px;
   z-index:100;
   box-shadow: 4px 4px 4px 0px #E2D9DB;
-<<<<<<< HEAD
-=======
   transition: 0.3s;
   opacity: 0;
   visibility: hidden; 
@@ -17,7 +15,6 @@
 .TipsBalloon.show {
   opacity: 1;
   visibility: visible;
->>>>>>> 1d1e9d6... dev
 }
 /* フキダシ部分を作成 */
 .TipsBalloon:before{

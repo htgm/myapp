@@ -13,13 +13,8 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-<<<<<<< HEAD
-        </p>
-        <MainMenu />
-=======
         </p>*/}
         <MainMenu/>
->>>>>>> 1d1e9d6... dev
       </div>
     );
   }

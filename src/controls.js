@@ -9,8 +9,6 @@ export const ToggleButton = ({className, children}) => {
     </label>
   )
 };
-<<<<<<< HEAD
-=======
 
 export class ToggleButton extends Component {
   render() {
@@ -23,4 +21,3 @@ export class ToggleButton extends Component {
     );
   }
 }
->>>>>>> 1d1e9d6... dev

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-=======
 import './TipsBalloon.css';
 
 export default class TipsBallon extends Component {
@@ -14,4 +12,3 @@ export default class TipsBallon extends Component {
     );
   }
 }
->>>>>>> 1d1e9d6... dev
