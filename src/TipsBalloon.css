@@ -1,9 +1,10 @@
 
 .TipsBalloon {
+  position: relative;
   display: block;                  /* ボックス要素にする */
   font-size: 90%;
   color: #fff;
-  background-color: #51A2C1;
+  background-color: #CCC;
   padding: 4px;
   border-radius:8px;
   z-index:100;
@@ -17,16 +18,14 @@
   visibility: visible;
 }
 /* フキダシ部分を作成 */
-.TipsBalloon:before{
-  content:''; 
-  display:block; 
-  position:absolute;                         /* relativeからの絶対位置 */
-  height:0; 
-  width:0; 
-  top:-10px; 
-  right:10px;
-  border:10px transparent solid; 
-  border-top-width:0; 
-  border-bottom-color:#51A2C1; 
-  z-index:100;
+.TipsBalloon:before {
+  border:10px solid transparent;
+  border-bottom-color:#ccc;
+  border-top-width:0;
+  top:-10px;
+  content:"";
+  display:block;
+  right:8px;
+  position:absolute;
+  width:0;
 }
