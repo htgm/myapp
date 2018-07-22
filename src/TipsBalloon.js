@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './TipsBalloon.css';
 
-export default class TipsBallon extends Component {
+export default class TipsBalloon extends Component {
   render() {
     const show = this.state && this.state.show ? " show" : "";
     return (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MainMenu.css';
 import { ToggleButton } from './controls';
+import TipsBalloon from './TipsBalloon';
 
 export default class MainMenu extends Component {
 
@@ -16,7 +17,7 @@ export default class MainMenu extends Component {
           <button className="button"><i className="material-icons">menu</i></button>
           <ToggleButton className="button" style={right} onChange={this.onToggleTips}><i className="material-icons">live_help</i></ToggleButton>
         </div>
-        <TipsBallon ref={node => this.tipsBalloon = node}/>
+        <TipsBalloon ref={node => this.tipsBalloon = node}/>
       </div>
     );
   }

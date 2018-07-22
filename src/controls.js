@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './controls.css';
 
-export const ToggleButton = ({className, children}) => {
+const InnerCheckbox = (props) => {
+  function onChange(e) {
+    props.onChange(e);
+  }
   return (
-    <label className={className}>
-      <input type="checkbox" className="controls-hidden"/>
-      {children}
-    </label>
+    <input type="checkbox" className="controls-hidden" checked={props.checked} onChange={onChange}/>
   )
 };
 
