@@ -11,8 +11,9 @@ export default class MainMenu extends Component {
   };
 
   onClickTips = e => {
-    console.log('click tips');
-    this.tipsBalloon.setState({ tips: App.tipsQueue.pop() })
+    if (this.tipsBalloon.state.show) {
+      this.tipsBalloon.setState({ tips: App.tipsQueue.pop() })
+    }
   };
 
   render() {

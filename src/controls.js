@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
 import './controls.css';
 
-const InnerCheckbox = (props) => {
-  function onChange(e) {
-    props.onChange(e);
-  }
-  return (
-    <input type="checkbox" className="controls-hidden" checked={props.checked} onChange={onChange}/>
-  )
-};
-
 export class ToggleButton extends Component {
   render() {
     console.dir(this);
+    const props = this.props;
     return (
-      <label className={this.props.className} style={this.props.style}>
-        <InnerCheckbox checked={this.props.checked} onChange={this.props.onChange}/>
-        {this.props.children}
+      <label className={props.className} style={props.style}>
+        <input type="checkbox" className="controls-hidden" checked={props.checked} onChange={e => props.onChange(e)}/>
+        {props.children}
       </label>
     );
   }

@@ -1,12 +1,14 @@
 
 .TipsBalloon {
+  float: right;
+  width: auto;
   user-select: none;
   position: relative;
   display: block;                  /* ボックス要素にする */
   font-size: 90%;
   color: #fff;
   background-color: #CCC;
-  padding: 4px;
+  padding: 8px;
   border-radius:8px;
   z-index:100;
   box-shadow: 4px 4px 4px 0px #E2D9DB;
