@@ -20,6 +20,12 @@ class App extends Component {
   }
 }
 
+//固定メッセージの取得
+App.msg = function (msgid) {
+  //クライアントの言語とmsgidからサーバーから取得
+  //取得したものはキャッシュされる
+};
+
 App.tipsQueue = [
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies cursus magna, in laoreet lacus sollicitudin ac. Nunc posuere justo non nunc auctor, ullamcorper scelerisque justo rhoncus. Vivamus placerat arcu dui, in gravida nunc suscipit ac. Morbi iaculis mauris a ipsum porta fringilla. Ut sed mi lectus. Aenean cursus dolor metus, non ultricies magna scelerisque et. Nulla ac lorem erat. Fusce pulvinar, mi hendrerit consectetur tempor, massa lacus finibus ipsum, sit amet scelerisque elit risus id turpis. Curabitur posuere leo ex, vitae varius nibh tincidunt at.',
   'Pellentesque at lorem non nibh porta euismod non id diam. Duis fermentum sem lorem, eu suscipit ante mollis nec. Donec nec ante sapien. Curabitur condimentum vitae risus rhoncus pretium. Nunc lacinia mauris dolor, dapibus lacinia orci scelerisque non. Etiam quis mi sit amet ipsum faucibus facilisis at id augue. Proin tempor felis vitae elit dictum dictum at eu ligula. Sed viverra est sed gravida facilisis. Duis semper mollis laoreet. Nullam tristique, augue eu cursus euismod, enim dolor semper tortor, vitae tincidunt odio justo nec sapien. Pellentesque gravida tincidunt viverra. Mauris fermentum sed libero volutpat vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi vel rhoncus massa. Donec tincidunt urna ipsum.',
