@@ -5,10 +5,11 @@ let server;
 
 gulp.task('server', () => {
 
-  gulp.watch('src/*.js', ['server']);
-
   if (server) {
     server.kill('SIGKILL');
+  }
+  else {
+    gulp.watch('src/*.js', ['server']);
   }
 
   server = spawn('node', ['src/server.js'], { stdio: 'inherit' });

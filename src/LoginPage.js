@@ -1,26 +1,45 @@
 import React, { Component } from 'react';
+import App from './App';
 
 export default class LoginPage extends Component {
 
-  onClick = () => {
+  onClick = e => {
+    if (App.ws) {
+      console.log('has ws -> close')
+      App.ws.close();
+      App.ws = null;
+    }
     const host = window.document.location.host.replace(/:.*/, '');
-    const wc = new WebSocket('ws://' + host + ':9999');
-    wc.onopen = e => {
-      wc.send('from client');
+    const ws = App.ws = new WebSocket('ws://' + host + ':9999');
+    ws.onopen = e => {
+      console.log('open')
+      ws.send('text from client');
+      ws.send(new Uint8Array([1,2,3]).buffer);
     };
-    wc.onerror = e => {
+    ws.onerror = e => {
+      console.log('error')
     };
-    wc.onmessage = e => {
+    ws.onmessage = e => {
+      console.log('message')
       console.log(e.data)
     };
-    wc.onclose = e => {
+    ws.onclose = e => {
+      console.log('close');
     };
+  };
+  onClick2 = e => {
+    if (App.ws) {
+      console.log('has ws -> close')
+      App.ws.close();
+      App.ws = null;
+    }
   };
 
   render() {
     return (
       <div className="LoginPage">
-        <button onClick={this.onClick}>click me</button>
+        <button onClick={this.onClick}>connect</button>
+        <button onClick={this.onClick2}>disconnect</button>
       </div>
     );
   }

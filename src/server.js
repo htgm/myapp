@@ -1,25 +1,25 @@
-const http = require('http');
 const WebSocketServer = require('ws').Server;
 
-const httpServer = http.createServer();
-const wsServer = new WebSocketServer({ server: httpServer });
+const wsServer = new WebSocketServer({ port: 9999 });
 
-wsServer.on('connection', s => {
-  console.log('conn');
+wsServer.on('connection', (ws, req) => {
+  const ip = req.connection.remoteAddress;
+  if (!ip) return ws.terminate();
+  console.log('conn from '+ip);
+
+  ws.on('close', s => {
+    console.log('close '+s);
+  });
+  
+  ws.on('message', msg => {
+    console.dir(msg)
+    console.log('msg:'+(typeof msg));
+  });
+
+  ws.on('error', s => {
+    console.log('err:'+s);
+  });
+  
 });
-
-wsServer.on('close', s => {
-  console.log('close');
-});
-
-wsServer.on('message', s => {
-  console.log('msg');
-});
-
-wsServer.on('error', s => {
-  console.log('err?');
-});
-
-httpServer.listen(9999);
 
 console.log('server: running');
